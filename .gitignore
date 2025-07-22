@@ -1,0 +1,58 @@
+# Build & IDE artifacts
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code workspace noise
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+# Rider / ReSharper (if ever used)
+.idea/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+packages/
+# (NuGet v3 stores packages in ~/.nuget, so usually nothing needed here)
+
+# Logs / dumps
+*.log
+*.dmp
+
+# Coverage / test results
+TestResult*/
+*.trx
+coverage*/
+coverage*.json
+*.coverage
+*.coveragexml
+
+# dotenv / secrets
+*.env
+*.env.*
+
+# User secrets (ASP.NET Core)
+**/secrets.json
+
+# ASP.NET Core publish output
+**/wwwroot/**
+!**/wwwroot/*.keep   # keep placeholder if you use one
+publish/
+
+# Generated files
+Generated_Code/
+
+# OS crap
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.swp

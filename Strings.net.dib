@@ -1,0 +1,15 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"name":"csharp"},{"name":"fsharp","languageName":"F#","aliases":["f#","fs"]},{"name":"html","languageName":"HTML"},{"name":"http","languageName":"HTTP"},{"name":"javascript","languageName":"JavaScript","aliases":["js"]},{"name":"mermaid","languageName":"Mermaid"},{"name":"pwsh","languageName":"PowerShell","aliases":["powershell"]},{"name":"value"}]}}
+
+#!csharp
+
+Console.WriteLine($"|{"Left",-7}|{"Right",7}|");
+
+const int FieldWidthRightAligned = 20;
+Console.WriteLine($"{Math.PI,FieldWidthRightAligned} - default formatting of the pi number");
+Console.WriteLine($"{Math.PI,FieldWidthRightAligned:F3} - display only three decimal digits of the pi number");
+// Output is:
+// |Left   |  Right|
+//     3.14159265358979 - default formatting of the pi number
+//                3.142 - display only three decimal digits of the pi number
