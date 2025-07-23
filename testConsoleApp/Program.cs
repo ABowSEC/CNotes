@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections.Generic;
+
+
 public class Program
 {
 
@@ -8,6 +10,9 @@ public class Program
         var numArr = new int[] { 87, 23, 1, 93, 2, 53 };
         numArr = MergeSort(numArr);
         Console.WriteLine(string.Join(",", numArr));
+        numArr = Add(numArr, 42);
+        Console.WriteLine(string.Join(",", numArr));
+
     }
 
 
@@ -45,9 +50,9 @@ public class Program
         int[] sortedRight = MergeSort(right);
         return Merge(sortedLeft, sortedRight);
 
-        
+
     }
-    
+
     public static int[] Merge(int[] left, int[] right)
     {
         int[] results = new int[left.Length + right.Length];
@@ -73,6 +78,18 @@ public class Program
         {
             results[k++] = right[j++];
         }
+        return results;
+    }
+
+
+    public static int[] Add(int[] ints, int num)
+    {
+        int[] results = new int[ints.Length + 1];
+        for (int i = 0; i < ints.Length; i++)
+        {
+            results[i] = ints[i];
+        }
+        results[ints.Length] = num;
         return results;
     }
 }
